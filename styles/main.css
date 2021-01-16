@@ -24,7 +24,7 @@ body {
   margin-top: 0px;
   height: 100vh;
   width: 90vw;
-  background: url("/images/background.gif");
+  background: url("/images/bg.gif");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: bottom;
@@ -93,7 +93,7 @@ body {
   background: var(--color-green);
   font-size: 20px;
   width: 200px;
-  height: 50px;
+  height: auto;
   margin-top: 1em;
   transition: ease-in 0.3s;
 }
@@ -102,7 +102,6 @@ body {
   background: var(--color-green);
   font-size: 20px;
   width: 200px;
-  height: 50px;
   transition: ease-out 0.3s;
   transform: translate3d(0px, 20px, 0px);
   box-shadow: 0px 0px 12px 12px var(--color-green-glass);
@@ -175,6 +174,62 @@ body {
   animation: pulse 0.9s infinite;
 }
 
+.music-player{
+  position: fixed;
+  cursor: pointer;
+  bottom: 50px;
+  right: 24px;
+  padding: 8px;
+  border-radius: 50%;
+  border: 3px solid var(--color-green);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.86s;
+}
+.animate:hover{
+  border: 4px solid var(--color-green-glass);
+  border-radius: 12px;
+}
+
+.animate{
+  animation: spin 2s infinite, pulse 1s infinite;
+}
+
+.u-list{
+  list-style: none;
+}
+.u-list li:before{
+  content: "";
+  border-color: transparent var(--color-green);
+  border-style: solid;
+  border-width: 0.35em 0 0.35em 0.45em;
+  display: block;
+  height: 0;
+  width: 0;
+  left: -1em;
+  top: 1.1em;
+  position: relative;
+}
+
+.styled-link{
+  position: relative;
+  color: var(--color-green);
+  text-decoration: none;
+  background: var(--color-green-glass);
+  padding: 4px 9px;
+  border-radius: 4px;
+  transition: all ease-in 0.3s;
+}
+
+.styled-link:hover{
+  
+  color: var(--color-green);
+  border-bottom: 3px solid var(--color-green);
+  text-decoration: none;
+}
+
 @keyframes pulse {
   0% {
     box-shadow: 0px 0px 12px 4px #38e2b3a8;
@@ -184,6 +239,15 @@ body {
   }
   100% {
     box-shadow: 0px 0px 12px 4px #38e2b3a8;
+  }
+}
+
+@keyframes spin{
+  0%{
+    rotate: 0deg;
+  }
+  100%{
+    rotate: 355deg;
   }
 }
 
