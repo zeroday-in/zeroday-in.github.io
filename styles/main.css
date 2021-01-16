@@ -174,12 +174,16 @@ body {
   animation: pulse 0.9s infinite;
 }
 
+.music-player i{
+  font-size: 24px;
+}
+
 .music-player{
   position: fixed;
   cursor: pointer;
   bottom: 50px;
   right: 24px;
-  padding: 8px;
+  padding: 20px;
   border-radius: 50%;
   border: 3px solid var(--color-green);
   justify-content: center;
