@@ -42,7 +42,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/styles/main.css" />
-
+    <link rel="stylesheet" href="/styles/vuesax.min.css" />
     <link
       rel="stylesheet"
       href="https://pro.fontawesome.com/releases/v5.2.0/css/all.css"
@@ -51,223 +51,246 @@
   </head>
   <body>
     <div id="app">
-    <div class="img-background"></div>
-    <!-- Header Start-->
-    <div class="header">
-      <!-- Nav Start -->
-      <div class="container">
-        <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-          <div class="container">
-            <a class="navbar-brand" href="#">
-              <img src="/images/logo.svg" alt="" />
-            </a>
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarNav"
-              aria-controls="navbarNav"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav">
-                <li class="nav-item">
-                  <a class="nav-link active" onclick="activate(this)" href="#"
-                    >Home</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" onclick="activate(this)" href="#about"
-                    >About</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" onclick="activate(this)" href="#services"
-                    >Services</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a
-                    class="nav-link"
-                    onclick="activate(this)"
-                    href="#contact-us"
-                    >Contact</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </div>
-      <!-- Nav End -->
-      <div class="header-text text-center">
-        <p class="ml-auto display-9 mb-0">Welcome to</p>
-        <h1 class="ml-auto display-1 mt-0 mb-0">
-          Zero<span class="color-green">Day</span>
-        </h1>
-        <p class="glass ml-auto display-9 mt-0">
-          <small>Web Development Agency</small>
-        </p>
-        <p></p>
-        <a class="btn btn-green" href="#contact-us">Contact Us</a>
-      </div>
-    </div>
-    <!-- About Us Start -->
-    <div class="container">
-      <div class="about" id="about">
-        <div class="row row-middle">
-          <div class="col-lg-9">
-            <div class="container-fluid text-justify">
-              <p></p>
-              <h1 class="color-green">
-                <span class="underline">About Us</span>
-              </h1>
-              <p></p>
-              <p>
-                Welcome to ZeroDay, A Web Development Agency Based in India. We are focused on Rapid Developement of Mobily Friendly Scalable Websites.
-                We focus on delivering the best possible iteration of user friendly and expierience enriched website that converts visitors into customers for your website.
-              </p>
-              <p>
-                Operating out of Gujarat, ZeroDay is your premier choice for online services. We provide a wide variety of digital services including web design, deployment, digital marketing and much more. Our team has a wide range of skills and expertise and we always put our clients’ satisfaction first. This is what sets us apart from the competition – an eye for detail and the best service from the start to the completion of your project. Quite simply, we offer the most reliable and effective services to any company looking for a whole host of online solutions.
-              </p>
-              <p>
-                Some of our best works include:
-                <ul class="u-list">
-                  <li>
-                    <a href="https://askadeveloper.pythonanywhere.com/" 
-                    class="styled-link"
-                    target="_blank">
-                      AskaDeveloper</a>
-                    - A digital platform for programmers where they can solve their doubts by getting helped from the community
-                  </li>
-                  
-                </ul>
-              </p>
-            </div>
-          </div>
-          <div class="col-lg-3 jc-center d-flex text-center">
-            <div class="container-fluid">
-              <img
-                src="/images/about_us_hero_md.jpg"
-                class="img-fluid about-hero"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- About Us End -->
-    <!-- Services Start -->
-    <div class="container">
-      <div class="about" id="services">
-        <div class="row row-middle">
-          <div class="col-lg-9">
-            <div class="container-fluid text-justify">
-              <p></p>
-              <h1 class="color-green">
-                <span class="underline">Services</span>
-              </h1>
-              <p></p>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit
-                incidunt est perferendis quia hic totam, eum nisi laboriosam,
-                facere rem nam aut doloremque dolores suscipit? Esse nostrum ex
-                est, placeat quia aut non dignissimos quod provident quae quasi
-                sint fuga quo laudantium odit repellat quam magnam aperiam.
-                Aspernatur qui repellendus temporibus earum. Repudiandae
-                suscipit quae exercitationem inventore iste magni quam.
-              </p>
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea
-                nemo odit placeat. Beatae, fugiat obcaecati in quia debitis,
-                esse provident assumenda quo adipisci eligendi sit neque aliquam
-                architecto cum nulla, numquam eum deleniti iusto quas.
-              </p>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Aliquid, est repellendus harum dolorem dolores quas beatae,
-                neque, aspernatur asperiores ducimus animi suscipit corporis
-                nulla repudiandae inventore voluptatibus minima eum? Maxime esse
-                ea cupiditate ipsa placeat, dicta iusto quam quasi odit.
-              </p>
-            </div>
-          </div>
-          <div class="col-lg-3 jc-center d-flex text-center">
-            <div class="container-fluid">
-              <img
-                src="/images/about_us_hero_md.jpg"
-                class="img-fluid about-hero"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Services End -->
-    <!-- Contact Us Start -->
-    <div class="container">
-      <div class="contact-us" id="contact-us">
+      <div class="img-background"></div>
+      <!-- Header Start-->
+      <div class="header">
+        <!-- Nav Start -->
         <div class="container">
-          <p></p>
-          <h1 class="color-green">
-            <span class="underline">Contact Us</span>
+          <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+            <div class="container">
+              <a class="navbar-brand" href="#">
+                <img src="/images/logo.svg" alt="" />
+              </a>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" onclick="activate(this)" href="#"
+                      >Home</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" onclick="activate(this)" href="#about"
+                      >About</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" onclick="activate(this)" href="#services"
+                      >Services</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link"
+                      onclick="activate(this)"
+                      href="#contact-us"
+                      >Contact</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <!-- Nav End -->
+        <div class="header-text text-center">
+          <p class="ml-auto display-9 mb-0">Welcome to</p>
+          <h1 class="ml-auto display-1 mt-0 mb-0">
+            Zero<span class="color-green">Day</span>
           </h1>
+          <p class="glass ml-auto display-9 mt-0">
+            <small>Web Development Agency</small>
+          </p>
           <p></p>
-          <form class="form-group" action="javascript:sendEmail()">
-            <input
-              class="form-control"
-              type="text"
-              placeholder="Enter Your Name"
-            />
+          <vs-button href="#contact-us" success size="large" style="width: 200px;background: var(--color-green);color:black">
+            <box-icon size="20px" name="mail-send"></box-icon>&nbsp;Contact Us</vs-button>
+        </div>
+      </div>
+      <!-- About Us Start -->
+      <div class="container">
+        <div class="about" id="about">
+          <div class="row row-middle">
+            <div class="col-lg-9">
+              <div class="container-fluid text-justify">
+                <p></p>
+                <h1 class="color-green">
+                  <span class="underline">About Us</span>
+                </h1>
+                <p></p>
+                <p>
+                  Welcome to ZeroDay, A Web Development Agency Based in India. We are focused on Rapid Developement of Mobily Friendly Scalable Websites.
+                  We focus on delivering the best possible iteration of user friendly and expierience enriched website that converts visitors into customers for your website.
+                </p>
+                <p>
+                  Operating out of Gujarat, ZeroDay is your premier choice for online services. We provide a wide variety of digital services including web design, deployment, digital marketing and much more. Our team has a wide range of skills and expertise and we always put our clients’ satisfaction first. This is what sets us apart from the competition – an eye for detail and the best service from the start to the completion of your project. Quite simply, we offer the most reliable and effective services to any company looking for a whole host of online solutions.
+                </p>
+                <p>
+                  Some of our best works include:
+                  <ul class="u-list">
+                    <li>
+                      <a href="https://askadeveloper.pythonanywhere.com/" 
+                      class="styled-link"
+                      target="_blank">
+                        AskaDeveloper</a>
+                      - A digital platform for programmers where they can solve their doubts by getting helped from the community
+                    </li>
+                    <li>
+                      <a href="https://noteapps.herokuapp.com/" 
+                      class="styled-link"
+                      target="_blank">
+                        NoteIT</a>
+                      - A reminder app to keep you synced with your schedule. Just add your To-Do list to our Tasks List and it will keep you reminded consistenly.
+                    </li>
+                  </ul>
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-3 jc-center d-flex text-center">
+              <div class="container-fluid">
+                <img
+                  src="/images/about_us_hero_md.jpg"
+                  class="img-fluid about-hero"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- About Us End -->
+      <!-- Services Start -->
+      <div class="container">
+        <div class="about" id="services">
+          <div class="row row-middle">
+            <div class="col-lg-9">
+              <div class="container-fluid text-justify">
+                <p></p>
+                <h1 class="color-green">
+                  <span class="underline">Services</span>
+                </h1>
+                <p></p>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit
+                  incidunt est perferendis quia hic totam, eum nisi laboriosam,
+                  facere rem nam aut doloremque dolores suscipit? Esse nostrum ex
+                  est, placeat quia aut non dignissimos quod provident quae quasi
+                  sint fuga quo laudantium odit repellat quam magnam aperiam.
+                  Aspernatur qui repellendus temporibus earum. Repudiandae
+                  suscipit quae exercitationem inventore iste magni quam.
+                </p>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea
+                  nemo odit placeat. Beatae, fugiat obcaecati in quia debitis,
+                  esse provident assumenda quo adipisci eligendi sit neque aliquam
+                  architecto cum nulla, numquam eum deleniti iusto quas.
+                </p>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Aliquid, est repellendus harum dolorem dolores quas beatae,
+                  neque, aspernatur asperiores ducimus animi suscipit corporis
+                  nulla repudiandae inventore voluptatibus minima eum? Maxime esse
+                  ea cupiditate ipsa placeat, dicta iusto quam quasi odit.
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-3 jc-center d-flex text-center">
+              <div class="container-fluid">
+                <img
+                  src="/images/about_us_hero_md.jpg"
+                  class="img-fluid about-hero"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Services End -->
+      <!-- Contact Us Start -->
+      <div class="container">
+        <div class="contact-us" id="contact-us">
+          <div class="container">
             <p></p>
-            <input
-              class="form-control"
-              type="email"
-              placeholder="Enter your email"
-            />
+            <h1 class="color-green">
+              <span class="underline">Contact Us</span>
+            </h1>
             <p></p>
-            <textarea
-              placeholder="Enter your message"
-              class="form-control"
-              rows="4"
-              cols="*"
-            ></textarea>
+            <form class="form-group" action="javascript:sendEmail()">
+              <input
+                class="form-control"
+                type="text"
+                placeholder="Enter Your Name"
+              />
+              <p></p>
+              <input
+                class="form-control"
+                type="email"
+                placeholder="Enter your email"
+              />
+              <p></p>
+              <textarea
+                placeholder="Enter your message"
+                class="form-control"
+                rows="4"
+                cols="*"
+              ></textarea>
+              <p>
+                <br />
+              </p>
+              <center>
+              <button class="btn btn-contact">Send Email</button>
+              </center>
+              <p></p>
+              <p
+                style="
+                  font-size: 20px;
+                  text-align: center;
+                  font-family: monospace;
+                  color: var(--color-green);
+                "
+              >
+                We are still developing the contact form
+              </p>
+            </form>
             <p>
               <br />
             </p>
-            <center>
-            <button class="btn btn-contact">Send Email</button>
-            </center>
-            <p></p>
-            <p
-              style="
-                font-size: 20px;
-                text-align: center;
-                font-family: monospace;
-                color: var(--color-green);
-              "
-            >
-              We are still developing the contact form
-            </p>
-          </form>
-          <p>
-            <br />
-          </p>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="music-player">
-      <i style="margin-left: 3px" class="fas fa-play"></i>
-    </div>
-    <audio id="music" src="./music/bgm.mp3" control autoplay loop></audio>
-    <!-- Contact Us End -->
+      <div class="music-player">
+        <i style="margin-left: 3px" class="fas fa-play"></i>
+      </div>
+      <audio id="music" src="./music/bgm.mp3" control autoplay loop></audio>
+      <!-- Contact Us End -->
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
     <script>
       const nav_links = document.querySelectorAll(".nav-link");
+      function activate(e) {
+        for (let i = 0; i < nav_links.length; i++) {
+          document.getElementsByClassName('nav-link')[i].classList.remove('active');
+        }
+        e.classList.add("active");
+      }
+    </script>
+    <script src="/js/vue.min.js"></script>
+    <script src="/js/vuesax.min.js"></script>
+    <script>
+      var song_selected_permanent = null;
+      const app = new Vue({
+        el: '#app',
+        data: { playing_song: null },
+        delimitors: ['[[',']]'],
+      });
       const songs = ['a_pocket_full_of_crores', 
                       'a_simple_man', 
                       'bse_ka_bachchan',
@@ -283,18 +306,19 @@
         $('#music')[0].src = src;  
         $('#music')[0].play();
         console.log("Playing: " + song_selected);
-      }  
-     $(document).ready(function(){
-       playRandomSong();
-     });
-      
-     function activate(e) {
-        for (let i = 0; i < nav_links.length; i++) {
-          nav_links[i].classList.remove("active");
+        song_selected = song_selected.replaceAll("_", " ").toLowerCase().split(" ");
+        for(let i = 0; i < song_selected.length; i++){
+          song_selected[i] = song_selected[i].charAt(0).toUpperCase() + song_selected[i].slice(1);
         }
-        e.classList.add("active");
+        song_selected = song_selected.join(" ");
+        song_selected_permanent = song_selected;
+        app.$vs.notification({
+          title: 'Let\'s play a song',
+          text: `Playing Song ${song_selected} from The Scam 1992, by Achint`,
+          color: 'primary'
+        })
       }
-      var isChrome = !!window.chrome;
+      const isChrome = !!window.chrome;
       var is_playing = isChrome ? false : true;
       window.isMobile = function() {
         let mobileBrowser = false;
@@ -302,21 +326,39 @@
         return mobileBrowser;
       };
       const isMobileBrowser = isMobile();
+      $(document).ready(function(){
+        if(isChrome){
+          app.$vs.notification({
+            title: 'Play a song',
+            text: "Tap on the play button over the right to play a song",
+            color: 'success'
+          })
+        }
+        else{
+          playRandomSong();
+        }      
+      });
       if(is_playing){
-        $('.music-player')[0].innerHTML = '<i style="margin-left: 3px" class="fas fa-pause"></i>'
+        $('.music-player')[0].innerHTML = '<box-icon color="#38e2b3" size="44px" name="pause-circle"></box-icon>'
       }
       $('.music-player').on("click", function(){
         if(is_playing){
           $('#music')[0].pause();
-          $('.music-player')[0].innerHTML = '<i style="margin-left: 3px" class="fas fa-play"></i>'
+          $('.music-player')[0].innerHTML = '<box-icon color="#38e2b3" size="44px" name="play-circle"></box-icon>'
           is_playing = false;
         }
         else{
           $('#music')[0].play();
-          $('.music-player')[0].innerHTML = '<i style="margin-left: 0px" class="fas fa-pause"></i>'
+          $('.music-player')[0].innerHTML = '<box-icon color="#38e2b3" size="44px" name="pause-circle"></box-icon>'
           is_playing = true;
+          if(isChrome){
+            playRandomSong();
+          }
         }
       });
+    </script>
+    <script src="https://unpkg.com/boxicons@latest/dist/boxicons.js"></script>
+    <script>
     </script>
   </body>
 </html>

@@ -11,7 +11,7 @@
 body {
   background: var(--color-black);
   font-family: "DM Sans", sans-serif;
-  font-weight: 500;
+  font-weight: 700;
   margin: 0;
   color: var(--color-white);
   padding: 0;
@@ -83,6 +83,10 @@ body {
 .nav-link:hover,
 .nav-link.active {
   color: var(--color-green) !important;
+}
+
+.active{
+  color: var(--color-green);
 }
 
 .color-green {
@@ -174,18 +178,12 @@ body {
   animation: pulse 0.9s infinite;
 }
 
-.music-player i{
-  font-size: 24px;
-}
-
 .music-player{
   position: fixed;
   cursor: pointer;
   bottom: 50px;
   right: 24px;
-  padding: 20px;
   border-radius: 50%;
-  border: 3px solid var(--color-green);
   justify-content: center;
   align-items: center;
   display: flex;
