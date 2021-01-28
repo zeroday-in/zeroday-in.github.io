@@ -43,10 +43,6 @@
     />
     <link rel="stylesheet" href="/styles/vuesax.min.css" />
     <link rel="stylesheet" href="/styles/main.css" />
-    <link
-      rel="stylesheet"
-      href="https://pro.fontawesome.com/releases/v5.2.0/css/all.css"
-    />
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
   </head>
   <body>
@@ -261,17 +257,21 @@
               <span class="underline">Contact Us</span>
             </h1>
             <p></p>
-            <form class="form-group" action="javascript:sendEmail()">
+            <form id="contact-form" class="form-group" action="javascript:void(0)">
               <input
                 class="form-control"
                 type="text"
                 placeholder="Enter Your Name"
+                id="name"
+                required
               />
               <p></p>
               <input
                 class="form-control"
                 type="email"
                 placeholder="Enter your email"
+                id="email"
+                required
               />
               <p></p>
               <textarea
@@ -279,24 +279,18 @@
                 class="form-control"
                 rows="4"
                 cols="*"
+                id="message"
+                required
               ></textarea>
               <p>
                 <br />
               </p>
               <center>
-              <button class="btn btn-contact">Send Email</button>
+              <button class="btn btn-contact ">
+                Send Email
+              </button>
               </center>
               <p></p>
-              <p
-                style="
-                  font-size: 20px;
-                  text-align: center;
-                  font-family: monospace;
-                  color: var(--color-green);
-                "
-              >
-                We are still developing the contact form
-              </p>
             </form>
             <p>
               <br />
@@ -333,10 +327,9 @@
     </script>
     <script src="/js/vue.min.js"></script>
     <script src="/js/vuesax.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js" integrity="sha512-f5HTYZYTDZelxS7LEQYv8ppMHTZ6JJWglzeQmr0CVTS70vJgaJiIO15ALqI7bhsracojbXkezUIL+35UXwwGrQ==" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script>
       var song_selected_permanent = null;
-      new Rellax(".bg");
       const app = new Vue({
         el: '#app',
         data: { playing_song: null },
@@ -390,6 +383,12 @@
           }
         // $('.music-player')[0].innerHTML = '<box-icon color="#38e2b3" size="44px" name="pause-circle"></box-icon>'
       }
+      else{
+        for(let i = 1; i < 10; i++){
+          let id = "#Line_" + i;
+          document.querySelector(id).classList.add('paused'); 
+        }
+      }
       $('.music-player').on("click", function(){
         if(is_playing){
           $('#music')[0].pause();
@@ -409,16 +408,37 @@
           // $('.music-player')[0].innerHTML = '<box-icon color="#38e2b3" size="44px" name="pause-circle"></box-icon>'
           is_playing = true;
           if(isChrome){
-            for(let i = 1; i < 10; i++){
-            let id = "#Line_" + i;
-            document.querySelector(id).classList.add('paused'); 
-          }
             playRandomSong();
           }
         }
       });
       window.onload = () => {
         $('.bg')[0].style.height = document.body.scrollHeight + "px";  
+      }
+      const contact_btn = $('.btn-contact')[0];
+      contact_btn.onclick = () => {
+        if(document.getElementById('contact-form').checkValidity()){
+          let xhttp = new XMLHttpRequest();
+          if(window.XMLHttpRequest){
+            xhttp = new XMLHttpRequest();
+          }
+          else{
+            xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+          }
+          xhttp.onreadystatechange = function(){
+            if(this.readyState == 4 && this.status == 200){
+              contact_btn.innerText = "Mail Sent";
+              setTimeout(() => {
+                contact_btn.innerText = "Send Another Mail"
+              }, 2000);
+            }
+          }
+          let data = `name=${document.querySelector('#name').value}&email=${document.querySelector('#email').value}&message=${document.querySelector('#message').value}`;
+          // alert(data);
+          xhttp.open("POST", "https://zeroday.pythonanywhere.com/api/contact/", true);
+          xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+          xhttp.send(data);
+        }
       }
     </script>
     <script src="https://unpkg.com/boxicons@latest/dist/boxicons.js"></script>

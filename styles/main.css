@@ -386,3 +386,8 @@ body, html {
     transform-origin: 50% 50%;
   }
 }
+
+.btn-contact.play{
+  animation: glow 0.5s infinite;
+  content: 'Sending Email';
+}

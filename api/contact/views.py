@@ -21,4 +21,4 @@ class ContactApi(View):
         subject = f'ZeroDay Contact Response - {name}'
         message = f'{name} responded to our contact form.\n\n - {message} \n\n By {name} - {email}'
         send_mail(subject, message, settings.EMAIL_HOST_USER, [settings.EMAIL_HOST_USER, ])
-        return HttpResponse("Hello World")
+        return JsonResponse({"message":"Sent Email"})
